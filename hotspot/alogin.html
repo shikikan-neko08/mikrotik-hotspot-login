@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="2; url=$(link-redirect)">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <title>Hotspot - Berhasil Login</title>
+    <style>
+        /* ---------- RESET & BASE ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            min-height: 100dvh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 16px;
+            background-image: url('img/img.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        /* Overlay gelap */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .main {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrap {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
+            padding: 40px 32px 32px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .wrap:hover {
+            transform: translateY(-4px);
+        }
+
+        /* Icon sukses */
+        .success-icon {
+            font-size: 64px;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .success-icon svg {
+            width: 72px;
+            height: 72px;
+            fill: #22c55e;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            font-size: 15px;
+            color: #444;
+            background: #f0f4ff;
+            padding: 12px 18px;
+            border-radius: 12px;
+            width: 100%;
+            line-height: 1.6;
+            word-break: break-word;
+        }
+
+        .info a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px dashed #3b82f6;
+        }
+
+        .info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Loader */
+        .loader {
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .loader span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #3b82f6;
+            animation: bounce 1.2s infinite ease-in-out both;
+        }
+
+        .loader span:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+        .loader span:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+        .loader span:nth-child(3) {
+            animation-delay: 0;
+        }
+
+        @keyframes bounce {
+            0%, 80%, 100% {
+                transform: scale(0.6);
+                opacity: 0.4;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 24px;
+            font-size: 13px;
+            color: #94a3b8;
+            letter-spacing: 0.3px;
+            width: 100%;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 16px;
+        }
+
+        .footer a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 400px) {
+            .wrap {
+                padding: 28px 18px 24px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .success-icon svg {
+                width: 56px;
+                height: 56px;
+            }
+        }
+
+        @media (max-height: 700px) {
+            body {
+                padding: 8px;
+            }
+            .wrap {
+                padding: 24px 20px 20px;
+                max-width: 360px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            .success-icon svg {
+                width: 48px;
+                height: 48px;
+            }
+            .footer {
+                margin-top: 16px;
+                padding-top: 12px;
+            }
+        }
+
+        @media (min-width: 600px) {
+            .wrap {
+                padding: 48px 40px 36px;
+                max-width: 420px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body onLoad="startClock()">
+
+    <!-- ===== FUNGSI ASLI ===== -->
+    <script>
+        function startClock() {
+            $(if popup == 'true')
+            open('$(link-status)', 'hotspot_status', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=290,height=200');
+            $(endif)
+            location.href = unescape('$(link-redirect-esc)');
+        }
+    </script>
+
+    <div class="main">
+        <div class="wrap">
+
+            <!-- Ikon sukses -->
+            <div class="success-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+            </div>
+
+            <h1>Login Berhasil!</h1>
+            <p class="subtitle">Anda sekarang terhubung ke internet.</p>
+
+            <p class="info">
+                Jika tidak dialihkan secara otomatis, klik <a href="$(link-redirect)">di sini</a>.
+            </p>
+
+            <!-- Animasi loading -->
+            <div class="loader">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <p>© 2026 Shikikan Neko. image by <a href="https://www.pixiv.net/en/users/13408349" target="_blank">natsumikan.</a></p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    $(if refresh-timeout)
+    <meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+    $(endif)
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <title>Hotspot - Status</title>
+    <style>
+        /* ---------- RESET & BASE (sama dengan login) ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            min-height: 100dvh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 16px;
+            background-image: url('img/img.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        /* Overlay gelap */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .main {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrap {
+            width: 100%;
+            max-width: 420px;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
+            padding: 32px 28px 28px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .wrap:hover {
+            transform: translateY(-4px);
+        }
+
+        /* ---------- HEADER ---------- */
+        .status-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 14px;
+        }
+
+        .status-icon {
+            width: 40px;
+            height: 40px;
+            background: #22c55e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .status-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: #fff;
+        }
+
+        .status-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a2e;
+            letter-spacing: -0.3px;
+            word-break: break-word;
+        }
+
+        .status-header h1 small {
+            font-size: 16px;
+            font-weight: 400;
+            color: #6b7a8f;
+        }
+
+        /* ---------- TABEL INFO ---------- */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .info-table tr {
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .info-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .info-table td {
+            padding: 10px 4px;
+            font-size: 15px;
+            color: #1e293b;
+        }
+
+        .info-table td:first-child {
+            font-weight: 600;
+            color: #475569;
+            width: 45%;
+        }
+
+        .info-table td:last-child {
+            font-weight: 500;
+            text-align: right;
+            color: #0f172a;
+            word-break: break-word;
+        }
+
+        .info-table .status-blocked a {
+            color: #dc2626;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .info-table .status-blocked a:hover {
+            color: #b91c1c;
+        }
+
+        /* ---------- TOMBOL LOGOUT ---------- */
+        .btn-logout {
+            width: 100%;
+            padding: 14px;
+            background: #ef4444;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.25s;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+            margin-top: 4px;
+        }
+
+        .btn-logout:hover {
+            background: #dc2626;
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(239, 68, 68, 0.4);
+        }
+
+        .btn-logout:active {
+            transform: scale(0.97);
+        }
+
+        /* ---------- FOOTER ---------- */
+        .footer {
+            margin-top: 24px;
+            font-size: 13px;
+            color: #94a3b8;
+            letter-spacing: 0.3px;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 16px;
+        }
+
+        .footer a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 400px) {
+            .wrap {
+                padding: 24px 16px 20px;
+            }
+            .status-header h1 {
+                font-size: 20px;
+            }
+            .status-header h1 small {
+                font-size: 14px;
+            }
+            .info-table td {
+                font-size: 14px;
+                padding: 8px 2px;
+            }
+            .btn-logout {
+                font-size: 16px;
+                padding: 12px;
+            }
+        }
+
+        @media (max-height: 700px) {
+            body {
+                padding: 8px;
+            }
+            .wrap {
+                padding: 18px 20px 16px;
+                max-width: 380px;
+            }
+            .status-header {
+                margin-bottom: 12px;
+                padding-bottom: 10px;
+            }
+            .status-header h1 {
+                font-size: 20px;
+            }
+            .status-icon {
+                width: 32px;
+                height: 32px;
+            }
+            .status-icon svg {
+                width: 18px;
+                height: 18px;
+            }
+            .info-table td {
+                padding: 6px 2px;
+                font-size: 13px;
+            }
+            .btn-logout {
+                padding: 10px;
+                font-size: 16px;
+            }
+            .footer {
+                margin-top: 14px;
+                padding-top: 10px;
+                font-size: 12px;
+            }
+        }
+
+        @media (min-width: 600px) {
+            .wrap {
+                padding: 40px 40px 32px;
+                max-width: 440px;
+            }
+            .status-header h1 {
+                font-size: 28px;
+            }
+            .btn-logout {
+                font-size: 20px;
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body $(if advert-pending == 'yes') onLoad="openAdvert()" $(endif)>
+
+    <!-- ===== FUNGSI ASLI (tetap dipertahankan) ===== -->
+    <script>
+        $(if advert-pending == 'yes')
+        var popup = '';
+        function focusAdvert() {
+            if (window.focus) popup.focus();
+        }
+        function openAdvert() {
+            popup = open('$(link-advert)', 'hotspot_advert', '');
+            setTimeout("focusAdvert()", 1000);
+        }
+        $(endif)
+
+        function openLogout() {
+            if (window.name != 'hotspot_status') return true;
+            open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+            window.close();
+            return false;
+        }
+    </script>
+    <!-- ============================================ -->
+
+    <div class="main">
+        <div class="wrap">
+
+            <!-- HEADER dengan ikon -->
+            <div class="status-header">
+                <div class="status-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                </div>
+                <h1>
+                    $(if login-by == 'trial')
+                        Hi, trial user!
+                    $(elif login-by != 'mac')
+                        Hi, $(username)!
+                    $(else)
+                        Status
+                    $(endif)
+                    <small>● Online</small>
+                </h1>
+            </div>
+
+            <!-- FORM dengan tabel info -->
+            <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+                <table class="info-table">
+                    <tr>
+                        <td>Alamat IP</td>
+                        <td>$(ip)</td>
+                    </tr>
+                    <tr>
+                        <td>Traffic (↓ / ↑)</td>
+                        <td>$(bytes-in-nice) / $(bytes-out-nice)</td>
+                    </tr>
+                    $(if session-time-left)
+                    <tr>
+                        <td>Terhubung / Sisa waktu</td>
+                        <td>$(uptime) / $(session-time-left)</td>
+                    </tr>
+                    $(else)
+                    <tr>
+                        <td>Lama terhubung</td>
+                        <td>$(uptime)</td>
+                    </tr>
+                    $(endif)
+                    $(if blocked == 'yes')
+                    <tr>
+                        <td>Status</td>
+                        <td class="status-blocked">
+                            <a href="$(link-advert)" target="hotspot_advert">Iklan diperlukan</a>
+                        </td>
+                    </tr>
+                    $(elif refresh-timeout)
+                    <tr>
+                        <td>Refresh status</td>
+                        <td>$(refresh-timeout)</td>
+                    </tr>
+                    $(endif)
+                </table>
+
+                $(if login-by-mac != 'yes')
+                <!-- user manager link (opsional) -->
+                <!-- <button onclick="document.location='http://$(hostname)/user?subs='; return false;">status</button> -->
+                <!-- end of user manager link -->
+                <input type="submit" class="btn-logout" value="Logout">
+                $(endif)
+            </form>
+
+            <!-- FOOTER (sama dengan login) -->
+            <div class="footer">
+                <p>© 2026 Shikikan Neko. image by <a href="https://www.pixiv.net/en/users/13408349" target="_blank">natsumikan.</a></p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
