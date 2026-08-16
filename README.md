@@ -1,4 +1,4 @@
-## Notes: This Repository Contains Ai Generated Material
+## Notes: This Repository Contains Ai Generated Material a.k.a Vibecoded
 Please keep in mind before using
 
 <details>
