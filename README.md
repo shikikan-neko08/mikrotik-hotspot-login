@@ -18,5 +18,6 @@ Feel free to modify it for your needs
 ![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Screenshot%20(22).png)
 
 ## Demo
-https://github.com/shikikan-neko08/mikrotik-hotspot-login/raw/refs/heads/main/2026-08-17%2018-21-42.mkv
+[![Watch the video](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Screenshot%20(20).png)](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/024b1aa5b74b0516c7d6d030d753d818489d85c2/2026-08-17%2018-21-42.mkv)
+
 
