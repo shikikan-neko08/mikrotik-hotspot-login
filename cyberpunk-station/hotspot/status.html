@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+$(if refresh-timeout)
+<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+$(endif)
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<meta name="theme-color" content="#090e17" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<title>Internet Hotspot - Status</title>
+<link rel="stylesheet" href="css/style.css">
+<script>
+$(if advert-pending == 'yes')
+    var popup = '';
+    function focusAdvert() {
+        if (window.focus) popup.focus();
+    }
+    function openAdvert() {
+        popup = open('$(link-advert)', 'hotspot_advert', '');
+        setTimeout("focusAdvert()", 1000);
+    }
+$(endif)
+    function openLogout() {
+        if (window.name != 'hotspot_status') return true;
+        open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=340,height=440');
+        window.close();
+        return false;
+    }
+</script>
+</head>
+<body $(if advert-pending == 'yes') onLoad="openAdvert()" $(endif)>
+    <div class="ie-fixMinHeight">
+        <div class="main">
+            <div class="wrap">
+                $(if login-by == 'trial')
+                    <h1>Welcome</h1>
+                    <p class="info"><span class="badge-status">Trial Session</span></p>
+                $(elif login-by != 'mac')
+                    <h1>Hi, $(username)!</h1>
+                    <p class="info"><span class="badge-status">Connected</span></p>
+                $(else)
+                    <h1>Connected</h1>
+                    <p class="info"><span class="badge-status">MAC Authenticated</span></p>
+                $(endif)                
+
+                <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+                    <table>
+                        <tr>
+                            <td>IP Address</td>
+                            <td>$(ip)</td>
+                        </tr>
+                        <tr>
+                            <td>Bytes Up / Down</td>
+                            <td>$(bytes-in-nice) / $(bytes-out-nice)</td>
+                        </tr>
+                        $(if session-time-left)
+                        <tr>
+                            <td>Uptime / Left</td>
+                            <td>$(uptime) / $(session-time-left)</td>
+                        </tr>
+                        $(else)
+                        <tr>
+                            <td>Connected Time</td>
+                            <td>$(uptime)</td>
+                        </tr>
+                        $(endif)
+                        $(if blocked == 'yes')
+                        <tr>
+                            <td>Status</td>
+                            <td><a href="$(link-advert)" target="hotspot_advert" style="color: #f87171;">Advertisement required</a></td>
+                        </tr>
+                        $(elif refresh-timeout)
+                        <tr>
+                            <td>Auto Refresh</td>
+                            <td>$(refresh-timeout)</td>
+                        </tr>
+                        $(endif)
+                    </table>
+
+                    $(if login-by-mac != 'yes')
+                    <input type="submit" value="Log out" />
+                    $(endif)
+                </form>
+
+                <p class="powered">Powered by MikroTik RouterOS</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

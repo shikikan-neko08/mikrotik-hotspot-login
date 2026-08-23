@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#090e17" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Internet Hotspot - Welcome</title>
+    <link rel="stylesheet" href="css/style.css?v=2.0">
+</head>
+<body>
+
+    <div class="ie-fixMinHeight">
+        <div class="main">
+            <div class="wrap">
+                <h1>Welcome</h1>
+                <p class="subtitle">Please Login Before Using Internet Service</p>
+
+                $(if error)
+                <p class="info alert">$(error)</p>
+                $(endif)
+
+                <form name="login" action="$(link-login-only)" method="post">
+                    <input type="hidden" name="dst" value="$(link-orig)" />
+                    <input type="hidden" name="popup" value="true" />
+
+                    <div class="input-group">
+                        <input name="username" type="text" value="$(username)" placeholder="Username" required autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false" />
+                        <!-- Inline SVG User Icon (Vibrant Neon Cyan Blue) -->
+                        <svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="#00e5ff">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                    </div>
+
+                    <div class="input-group">
+                        <input name="password" type="password" placeholder="Password" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" />
+                        <!-- Inline SVG Lock Icon (Vibrant Neon Cyan Blue) -->
+                        <svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="#00e5ff">
+                            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                        </svg>
+                    </div>
+
+                    <input type="submit" value="Login" />
+                </form>
+
+                <p class="powered">Powered by MikroTik RouterOS</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
