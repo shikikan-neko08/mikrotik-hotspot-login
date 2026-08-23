@@ -11,19 +11,32 @@ Feel free to modify it for your needs
 ## Screenshots
 
 ### Default
+
 Artist Credit: [natsumikan](https://www.pixiv.net/en/artworks/99654366)
 
-![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Screenshot%20(20).png)
+![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%20(20).png)
 
-![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Screenshot%20(21).png)
+![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%20(21).png)
 
-![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Screenshot%20(23).png) 
+![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%20(23).png) 
 
-![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Screenshot%20(22).png)
+![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%20(22).png)
 
-### Demo
+#### Demo
 
 https://github.com/user-attachments/assets/c51e2947-0e07-4378-8ed1-3c8fcdd1bb32
+
+
+### Cyberpunk Station
+
+![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%20(26).png)
+
+![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%20(27).png)
+
+![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%20(28).png) 
+
+![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%20(29).png)
+
 
 
 
