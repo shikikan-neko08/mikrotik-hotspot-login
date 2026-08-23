@@ -11,6 +11,7 @@ Feel free to modify it for your needs
 ## Screenshots
 
 ### Default
+Artist Credit: [natsumikan](https://www.pixiv.net/en/artworks/99654366)
 
 ![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Screenshot%20(20).png)
 
