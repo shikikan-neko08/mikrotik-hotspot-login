@@ -37,6 +37,14 @@ https://github.com/user-attachments/assets/c51e2947-0e07-4378-8ed1-3c8fcdd1bb32
 
 ![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%20(29).png)
 
+#### Demo
+
+https://github.com/user-attachments/assets/95d4a78f-d89d-48e0-83fb-ad7f477b2940
+
+
+
+
+
 
 
 
