@@ -62,7 +62,19 @@ add dst-host=fonts.gstatic.com action=allow comment="Google Fonts Files"
 
 https://github.com/user-attachments/assets/458380dc-1331-441b-afdf-342b5cb97757
 
+#### Blueprint
 
+<details>
+  <summary>Original Canva Blueprint</summary>
+  
+  ![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%20(30).png)
+  
+  ![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%20(31).png)
+  
+  ![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%20(32).png) 
+  
+  ![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%20(33).png)
+</details>
 
 
 
