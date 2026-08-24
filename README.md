@@ -50,13 +50,13 @@ add dst-host=fonts.googleapis.com action=allow comment="Google Fonts CSS"
 add dst-host=fonts.gstatic.com action=allow comment="Google Fonts Files"
 ```
 
-![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%202026-08-24%20193948.png)
+![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%202026-08-24%20212600.png)
 
-![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%202026-08-24%20194017.png)
+![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%202026-08-24%20212644.png)
 
-![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%202026-08-24%20194041.png) 
+![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%202026-08-24%20212710.png) 
 
-![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%202026-08-24%20194054.png)
+![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%202026-08-24%20212720.png)
 
 #### Demo
 
