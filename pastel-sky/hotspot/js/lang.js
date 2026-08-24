@@ -1,7 +1,5 @@
 ﻿/**
- * Multi-Language Handler for MikroTik Hotspot
- * Supports: English (EN), Indonesian (ID)
- * Automatically persists user selection in localStorage
+ * Multi-Language Handler for MikroTik Hotspot (EN & ID)
  */
 
 const translations = {

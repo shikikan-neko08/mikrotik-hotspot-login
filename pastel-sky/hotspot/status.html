@@ -10,7 +10,7 @@ $(endif)
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="expires" content="-1">
     <title>Hotspot - Status</title>
-    <link rel="stylesheet" href="css/style.css?v=8.0">
+    <link rel="stylesheet" href="css/style.css?v=offline">
     <script>
     $(if advert-pending == 'yes')
         var popup = '';
@@ -39,7 +39,7 @@ $(endif)
                 <img src="img/illustration.png" alt="Hotspot Illustration" />
             </div>
 
-            <!-- Right Panel -->
+            <!-- Right Panel (Centered) -->
             <div class="card-right">
                 <h1 data-i18n="hi_user" data-username="$(if username)$(username)$(else)User$(endif)">Hi $(if username)$(username)$(else)User$(endif)!</h1>
                 
@@ -96,13 +96,13 @@ $(endif)
                         <select id="langSelect" class="lang-select" aria-label="Language Selector">
                             <option value="EN">EN</option>
                             <option value="ID">ID</option>
-                            </select>
+                        </select>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="js/lang.js?v=3.0"></script>
+    <script src="js/lang.js?v=offline"></script>
 </body>
 </html>
