@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#a8c8e1" />
+    <meta http-equiv="refresh" content="2; url=$(link-redirect)">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <title>Hotspot - Login Successful</title>
+    <link rel="stylesheet" href="css/style.css?v=6.0">
+    <script>
+        function startClock() {
+            $(if popup == 'true')
+            open('$(link-status)', 'hotspot_status', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=380,height=480');
+            $(endif)
+            location.href = unescape('$(link-redirect-esc)');
+        }
+    </script> 
+</head>
+<body onLoad="startClock()">
+
+    <div class="container">
+        <div class="card">
+            <!-- Left Illustration -->
+            <div class="card-left">
+                <img src="img/illustration.png" alt="Hotspot Illustration" />
+            </div>
+
+            <!-- Right Panel (Centered vertically) -->
+            <div class="card-right card-center">
+                <div class="redirect-box">
+                    <h1 data-i18n="login_successful">Login Successful</h1>
+                    <p class="subtitle" data-i18n="redirecting">You are being redirected...</p>
+
+                    <!-- Spinner Dots Icon -->
+                    <div class="spinner-dots">
+                        <svg class="spinner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6">
+                            <circle cx="12" cy="12" r="9"></circle>
+                        </svg>
+                    </div>
+
+                    <a href="$(link-redirect)" class="btn" data-i18n="btn_redirect_fallback">If Nothing Happens Click Here &gt;&gt;&gt;</a>
+                </div>
+
+                <!-- Language Switcher in Bottom Right -->
+                <div class="bottom-bar">
+                    <div class="lang-wrapper">
+                        <svg class="globe-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        <select id="langSelect" class="lang-select" aria-label="Language Selector">
+                            <option value="EN">EN</option>
+                            <option value="ID">ID</option>
+                            </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lang.js?v=3.0"></script>
+</body>
+</html>

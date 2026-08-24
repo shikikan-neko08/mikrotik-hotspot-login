@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#a8c8e1" />
+    <title>Hotspot - Welcome</title>
+    <link rel="stylesheet" href="css/style.css?v=6.0">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <!-- Left Illustration -->
+            <div class="card-left">
+                <img src="img/illustration.png" alt="Hotspot Illustration" />
+            </div>
+
+            <!-- Right Login Form Panel -->
+            <div class="card-right">
+                <h1 data-i18n="welcome">Welcome</h1>
+                <p class="subtitle" data-i18n="subtitle_login">Please Login Before Using Internet Service</p>
+
+                $(if error)
+                <p class="info-alert">$(error)</p>
+                $(endif)
+
+                <form name="login" action="$(link-login-only)" method="post">
+                    <input type="hidden" name="dst" value="$(link-orig)" />
+                    <input type="hidden" name="popup" value="true" />
+
+                    <div class="input-field">
+                        <input name="username" type="text" value="$(username)" placeholder="Username" data-i18n-placeholder="placeholder_username" required autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false" autofocus />
+                    </div>
+
+                    <div class="input-field">
+                        <input name="password" type="password" placeholder="Password" data-i18n-placeholder="placeholder_password" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" />
+                    </div>
+
+                    <input type="submit" value="Login &gt;&gt;&gt;" data-i18n-value="btn_login" />
+                </form>
+
+                <!-- Language Switcher in Bottom Right -->
+                <div class="bottom-bar">
+                    <div class="lang-wrapper">
+                        <svg class="globe-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        <select id="langSelect" class="lang-select" aria-label="Language Selector">
+                            <option value="EN">EN</option>
+                            <option value="ID">ID</option>
+                            </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lang.js?v=3.0"></script>
+</body>
+</html>

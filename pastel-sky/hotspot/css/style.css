@@ -1,0 +1,372 @@
+/* ==========================================================================
+   MikroTik Hotspot - Aesthetic Pastel Blue Card Theme
+   Font: Jua (Google Fonts)
+   Designed exactly as reference mockup
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+:root {
+    --bg-page: #a8c8e1;
+    --card-bg: #bdd8e8;
+    --border-color: #35527a;
+    --text-color: #35527a;
+    --text-muted: #5778a3;
+    --input-placeholder: #7796be;
+    --btn-bg: #35527a;
+    --btn-hover: #263e60;
+    --btn-text: #ffffff;
+    --accent-green: #258f62;
+    --accent-red: #c0392b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Jua', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: var(--bg-page);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    padding: 20px 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    width: 100%;
+    max-width: 680px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Outer Card with Navy 2px Border */
+.card {
+    width: 100%;
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(53, 82, 122, 0.12);
+}
+
+/* Left Illustration Panel */
+.card-left {
+    width: 48%;
+    min-height: 290px;
+    border-right: 2px solid var(--border-color);
+    background-color: #c4dcf0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+}
+
+.card-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Right Content Panel */
+.card-right {
+    width: 52%;
+    padding: 24px 28px 18px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+
+/* Typography */
+h1 {
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.15;
+    margin-bottom: 4px;
+    letter-spacing: 0.2px;
+}
+
+.subtitle {
+    font-size: 11px;
+    color: var(--text-color);
+    line-height: 1.35;
+    margin-bottom: 18px;
+    font-weight: 400;
+}
+
+.status-badge {
+    font-size: 11.5px;
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+
+.status-badge.connected {
+    color: var(--accent-green);
+}
+
+.status-badge.logout {
+    color: var(--accent-red);
+}
+
+/* Form & Inputs */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-field {
+    width: 100%;
+    margin-bottom: 14px;
+}
+
+.input-field input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--border-color);
+    color: var(--text-color);
+    font-family: 'Jua', sans-serif;
+    font-size: 13.5px;
+    padding: 4px 0 6px 0;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.input-field input::placeholder {
+    color: var(--input-placeholder);
+    opacity: 0.9;
+}
+
+.input-field input:focus {
+    border-bottom-color: #1a2a40;
+}
+
+/* Pill Shaped Button (Full-width lengthened style) */
+.btn, input[type="submit"] {
+    width: 100%;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    border-radius: 22px;
+    padding: 8px 24px;
+    font-size: 13px;
+    font-family: 'Jua', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    margin-top: 6px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(53, 82, 122, 0.25);
+    text-align: center;
+}
+
+.btn:hover, input[type="submit"]:hover {
+    background-color: var(--btn-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(53, 82, 122, 0.35);
+}
+
+.btn:active, input[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+.btn.btn-full {
+    align-self: stretch;
+    width: 100%;
+    padding: 8px 16px;
+    margin-top: 10px;
+}
+
+/* Info & Alerts */
+.info-alert {
+    background: rgba(192, 57, 43, 0.15);
+    border: 1px solid var(--accent-red);
+    color: var(--accent-red);
+    padding: 6px 10px;
+    font-size: 11px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+}
+
+/* Aesthetic Table for Status & Logout */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid var(--border-color);
+    margin-bottom: 14px;
+}
+
+.data-table tr {
+    border-bottom: 2px solid var(--border-color);
+}
+
+.data-table tr:last-child {
+    border-bottom: none;
+}
+
+.data-table td {
+    padding: 4px 8px;
+    font-size: 11.5px;
+    color: var(--text-color);
+    border-right: 2px solid var(--border-color);
+    font-family: 'Jua', sans-serif;
+}
+
+.data-table td:first-child {
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.data-table td:last-child {
+    width: 50%;
+    border-right: none;
+}
+
+/* Spinner for Redirect / alogin */
+.card-right.card-center {
+    justify-content: center;
+    align-items: stretch;
+    min-height: 290px;
+}
+
+.redirect-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.redirect-box h1 {
+    margin-bottom: 3px;
+    line-height: 1.15;
+}
+
+.redirect-box .subtitle {
+    margin-bottom: 12px;
+}
+
+.spinner-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 0 16px 0;
+    width: 100%;
+}
+
+.spinner-icon {
+    width: 32px;
+    height: 32px;
+    animation: rotate 1.2s linear infinite;
+    color: var(--border-color);
+}
+
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
+}
+
+/* Bottom Language Selector (Right Aligned) */
+.bottom-bar {
+    position: absolute;
+    right: 22px;
+    bottom: 14px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.lang-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.globe-icon {
+    width: 18px;
+    height: 18px;
+    stroke: var(--text-color);
+    stroke-width: 1.8;
+    fill: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.lang-select {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-family: 'Jua', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+    outline: none;
+    padding-right: 2px;
+}
+
+.lang-select option {
+    background: #bdd8e8;
+    color: #35527a;
+    font-family: 'Jua', sans-serif;
+}
+
+/* Responsive (Mobile view) */
+@media (max-width: 580px) {
+    .card {
+        flex-direction: column;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .card-left {
+        width: 100%;
+        height: 180px;
+        min-height: unset;
+        border-right: none;
+        border-bottom: 2px solid var(--border-color);
+    }
+
+    .card-right {
+        width: 100%;
+        padding: 20px 22px 16px 22px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 11px;
+        margin-bottom: 14px;
+    }
+
+    .btn, input[type="submit"] {
+        font-size: 12px;
+        padding: 7px 20px;
+    }
+}

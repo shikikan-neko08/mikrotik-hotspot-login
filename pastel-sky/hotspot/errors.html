@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#a8c8e1" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <title>Hotspot - Error</title>
+    <link rel="stylesheet" href="css/style.css?v=6.0">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <!-- Left Illustration -->
+            <div class="card-left">
+                <img src="img/illustration.png" alt="Hotspot Illustration" />
+            </div>
+
+            <!-- Right Panel -->
+            <div class="card-right">
+                <h1 data-i18n="error_title">Hotspot Error</h1>
+                <p class="info-alert" style="margin-top: 10px;">$(error)</p>
+
+                <div style="margin-top: 14px;">
+                    <a href="$(link-login)" class="btn" data-i18n="btn_back_login">Back to Login &gt;&gt;&gt;</a>
+                </div>
+
+                <!-- Language Switcher in Bottom Right -->
+                <div class="bottom-bar">
+                    <div class="lang-wrapper">
+                        <svg class="globe-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        <select id="langSelect" class="lang-select" aria-label="Language Selector">
+                            <option value="EN">EN</option>
+                            <option value="ID">ID</option>
+                            </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lang.js?v=3.0"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4c1d95" />
+      <stop offset="35%" stop-color="#6b21a8" />
+      <stop offset="65%" stop-color="#86198f" />
+      <stop offset="85%" stop-color="#a21caf" />
+      <stop offset="100%" stop-color="#581c87" />
+    </linearGradient>
+    <linearGradient id="mountainGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6b21a8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#3b0764" />
+    </linearGradient>
+    <linearGradient id="mountainGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#581c87" />
+      <stop offset="100%" stop-color="#2e1065" />
+    </linearGradient>
+    <linearGradient id="forestGradBack" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b0764" />
+      <stop offset="100%" stop-color="#1e0538" />
+    </linearGradient>
+    <linearGradient id="forestGradFront" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#240046" />
+      <stop offset="100%" stop-color="#10002b" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0" />
+    </radialGradient>
+    <g id="pine">
+      <path d="M0,-80 L20,-45 L13,-45 L26,-15 L18,-15 L32,20 L8,20 L8,40 L-8,40 L-8,20 L-32,20 L-18,-15 L-26,-15 L-13,-45 L-20,-45 Z"/>
+    </g>
+  </defs>
+
+  <!-- Sky Background -->
+  <rect width="1920" height="1080" fill="url(#skyGrad)" />
+  <rect width="1920" height="1080" fill="url(#glow)" />
+
+  <!-- Stars -->
+  <g fill="#ffffff">
+    <circle cx="120" cy="80" r="1.5" opacity="0.8"/>
+    <circle cx="250" cy="140" r="2" opacity="0.9"/>
+    <circle cx="340" cy="60" r="1" opacity="0.6"/>
+    <circle cx="480" cy="190" r="2.5" opacity="0.95"/>
+    <circle cx="560" cy="110" r="1.5" opacity="0.7"/>
+    <circle cx="690" cy="70" r="2" opacity="0.85"/>
+    <circle cx="810" cy="150" r="1.5" opacity="0.75"/>
+    <circle cx="940" cy="90" r="3" opacity="1"/>
+    <polygon points="940,80 943,88 951,90 943,92 940,100 937,92 929,90 937,88" opacity="0.9"/>
+    <circle cx="1050" cy="170" r="1.5" opacity="0.6"/>
+    <circle cx="1180" cy="80" r="2" opacity="0.8"/>
+    <circle cx="1290" cy="130" r="2.5" opacity="0.9"/>
+    <circle cx="1380" cy="60" r="1" opacity="0.5"/>
+    <circle cx="1490" cy="180" r="2" opacity="0.85"/>
+    <circle cx="1620" cy="100" r="3" opacity="0.95"/>
+    <polygon points="1620,90 1623,98 1631,100 1623,102 1620,110 1617,102 1609,100 1617,98" opacity="0.85"/>
+    <circle cx="1750" cy="140" r="1.5" opacity="0.7"/>
+    <circle cx="1850" cy="75" r="2" opacity="0.8"/>
+    <circle cx="80" cy="220" r="1.5" opacity="0.7"/>
+    <circle cx="210" cy="290" r="2" opacity="0.8"/>
+    <circle cx="390" cy="260" r="1.5" opacity="0.6"/>
+    <circle cx="520" cy="310" r="2" opacity="0.75"/>
+    <circle cx="670" cy="240" r="2.5" opacity="0.9"/>
+    <polygon points="670,232 672,238 678,240 672,242 670,248 668,242 662,240 668,238" opacity="0.8"/>
+    <circle cx="850" cy="270" r="1" opacity="0.5"/>
+    <circle cx="990" cy="230" r="2" opacity="0.85"/>
+    <circle cx="1120" cy="290" r="1.5" opacity="0.7"/>
+    <circle cx="1320" cy="250" r="2" opacity="0.8"/>
+    <circle cx="1450" cy="300" r="1.5" opacity="0.6"/>
+    <circle cx="1580" cy="230" r="2.5" opacity="0.9"/>
+    <circle cx="1780" cy="270" r="1" opacity="0.5"/>
+    <circle cx="1880" cy="210" r="2" opacity="0.75"/>
+    <!-- subtle smaller stars -->
+    <circle cx="160" cy="180" r="0.8" opacity="0.4"/>
+    <circle cx="310" cy="120" r="0.8" opacity="0.4"/>
+    <circle cx="430" cy="80" r="0.8" opacity="0.4"/>
+    <circle cx="610" cy="160" r="0.8" opacity="0.4"/>
+    <circle cx="750" cy="110" r="0.8" opacity="0.4"/>
+    <circle cx="890" cy="170" r="0.8" opacity="0.4"/>
+    <circle cx="1020" cy="100" r="0.8" opacity="0.4"/>
+    <circle cx="1150" cy="150" r="0.8" opacity="0.4"/>
+    <circle cx="1250" cy="70" r="0.8" opacity="0.4"/>
+    <circle cx="1410" cy="120" r="0.8" opacity="0.4"/>
+    <circle cx="1530" cy="70" r="0.8" opacity="0.4"/>
+    <circle cx="1700" cy="170" r="0.8" opacity="0.4"/>
+  </g>
+
+  <!-- Far Mountains -->
+  <path d="M0,450 Q180,360 360,420 T720,380 T1080,440 T1440,370 T1800,430 L1920,410 L1920,1080 L0,1080 Z" fill="url(#mountainGrad1)" opacity="0.6"/>
+
+  <!-- Mid Mountains Layer -->
+  <path d="M0,520 Q240,430 480,490 T960,460 T1440,510 T1920,450 L1920,1080 L0,1080 Z" fill="url(#mountainGrad2)" opacity="0.85"/>
+
+  <!-- Back Layer Pine Forest -->
+  <g fill="url(#forestGradBack)">
+    <use href="#pine" x="40" y="650" transform="scale(1.4)"/>
+    <use href="#pine" x="120" y="640" transform="scale(1.3)"/>
+    <use href="#pine" x="200" y="660" transform="scale(1.5)"/>
+    <use href="#pine" x="290" y="630" transform="scale(1.2)"/>
+    <use href="#pine" x="370" y="650" transform="scale(1.4)"/>
+    <use href="#pine" x="460" y="670" transform="scale(1.6)"/>
+    <use href="#pine" x="550" y="630" transform="scale(1.3)"/>
+    <use href="#pine" x="640" y="660" transform="scale(1.5)"/>
+    <use href="#pine" x="730" y="640" transform="scale(1.2)"/>
+    <use href="#pine" x="820" y="670" transform="scale(1.4)"/>
+    <use href="#pine" x="910" y="650" transform="scale(1.3)"/>
+    <use href="#pine" x="1000" y="660" transform="scale(1.5)"/>
+    <use href="#pine" x="1090" y="630" transform="scale(1.2)"/>
+    <use href="#pine" x="1180" y="650" transform="scale(1.4)"/>
+    <use href="#pine" x="1270" y="670" transform="scale(1.6)"/>
+    <use href="#pine" x="1360" y="640" transform="scale(1.3)"/>
+    <use href="#pine" x="1450" y="660" transform="scale(1.5)"/>
+    <use href="#pine" x="1540" y="630" transform="scale(1.2)"/>
+    <use href="#pine" x="1630" y="660" transform="scale(1.4)"/>
+    <use href="#pine" x="1720" y="640" transform="scale(1.3)"/>
+    <use href="#pine" x="1810" y="670" transform="scale(1.5)"/>
+    <use href="#pine" x="1900" y="650" transform="scale(1.4)"/>
+  </g>
+
+  <!-- Front Layer Silhouette Pine Forest -->
+  <g fill="url(#forestGradFront)">
+    <rect x="0" y="850" width="1920" height="230" />
+    <use href="#pine" x="10" y="480" transform="scale(1.9)"/>
+    <use href="#pine" x="80" y="470" transform="scale(2.1)"/>
+    <use href="#pine" x="160" y="500" transform="scale(1.8)"/>
+    <use href="#pine" x="250" y="460" transform="scale(2.2)"/>
+    <use href="#pine" x="330" y="490" transform="scale(1.9)"/>
+    <use href="#pine" x="420" y="460" transform="scale(2.3)"/>
+    <use href="#pine" x="510" y="510" transform="scale(1.8)"/>
+    <use href="#pine" x="600" y="470" transform="scale(2.1)"/>
+    <use href="#pine" x="690" y="500" transform="scale(1.9)"/>
+    <use href="#pine" x="780" y="450" transform="scale(2.3)"/>
+    <use href="#pine" x="870" y="480" transform="scale(2.0)"/>
+    <use href="#pine" x="960" y="460" transform="scale(2.2)"/>
+    <use href="#pine" x="1050" y="510" transform="scale(1.8)"/>
+    <use href="#pine" x="1140" y="470" transform="scale(2.1)"/>
+    <use href="#pine" x="1230" y="490" transform="scale(1.9)"/>
+    <use href="#pine" x="1320" y="450" transform="scale(2.3)"/>
+    <use href="#pine" x="1410" y="480" transform="scale(2.0)"/>
+    <use href="#pine" x="1500" y="460" transform="scale(2.2)"/>
+    <use href="#pine" x="1590" y="500" transform="scale(1.8)"/>
+    <use href="#pine" x="1680" y="470" transform="scale(2.1)"/>
+    <use href="#pine" x="1760" y="490" transform="scale(1.9)"/>
+    <use href="#pine" x="1850" y="460" transform="scale(2.3)"/>
+    <use href="#pine" x="1930" y="480" transform="scale(2.0)"/>
+  </g>
+</svg>

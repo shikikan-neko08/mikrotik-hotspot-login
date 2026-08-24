@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#a8c8e1" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <title>Hotspot - Logged Out</title>
+    <link rel="stylesheet" href="css/style.css?v=6.0">
+    <script>
+        function openLogin() {
+            if (window.name != 'hotspot_logout') return true;
+            open('$(link-login)', '_blank', '');
+            window.close();
+            return false;
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <!-- Left Illustration -->
+            <div class="card-left">
+                <img src="img/illustration.png" alt="Hotspot Illustration" />
+            </div>
+
+            <!-- Right Panel -->
+            <div class="card-right">
+                <h1 data-i18n="logged_out">Logged Out!</h1>
+                <p class="status-badge logout" data-i18n="logged_out_sub">You Have Been Logged Out</p>
+
+                <table class="data-table">
+                    <tr>
+                        <td data-i18n="ip_address">IP Address</td>
+                        <td>$(ip)</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="bytes_up_down">Bytes Up/Down</td>
+                        <td>$(bytes-in-nice) / $(bytes-out-nice)</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="connected_time">Connected Time</td>
+                        <td>$(uptime)</td>
+                    </tr>
+                    $(if session-time-left)
+                    <tr>
+                        <td data-i18n="time_left">Time Left</td>
+                        <td>$(session-time-left)</td>
+                    </tr>
+                    $(endif)
+                </table>
+
+                <form action="$(link-login)" name="login" onSubmit="return openLogin()">
+                    <input type="submit" value="Login" data-i18n-value="btn_login_again" />
+                </form>
+
+                <!-- Language Switcher in Bottom Right -->
+                <div class="bottom-bar">
+                    <div class="lang-wrapper">
+                        <svg class="globe-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        <select id="langSelect" class="lang-select" aria-label="Language Selector">
+                            <option value="EN">EN</option>
+                            <option value="ID">ID</option>
+                            </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lang.js?v=3.0"></script>
+</body>
+</html>
