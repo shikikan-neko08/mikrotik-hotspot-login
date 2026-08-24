@@ -41,6 +41,20 @@ https://github.com/user-attachments/assets/c51e2947-0e07-4378-8ed1-3c8fcdd1bb32
 
 https://github.com/user-attachments/assets/95d4a78f-d89d-48e0-83fb-ad7f477b2940
 
+### Pastel Sky
+
+![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%202026-08-24%20193948.png)
+
+![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%202026-08-24%20194017.png)
+
+![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%202026-08-24%20194041.png) 
+
+![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%202026-08-24%20194054.png)
+
+#### Demo
+
+https://github.com/user-attachments/assets/458380dc-1331-441b-afdf-342b5cb97757
+
 
 
 
