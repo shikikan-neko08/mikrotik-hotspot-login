@@ -43,13 +43,6 @@ https://github.com/user-attachments/assets/95d4a78f-d89d-48e0-83fb-ad7f477b2940
 
 ### Pastel Sky
 
-You need to add the google font cdn domains into your walled garden list. Otherwise the font won't load.
-```
-/ip hotspot walled-garden
-add dst-host=fonts.googleapis.com action=allow comment="Google Fonts CSS"
-add dst-host=fonts.gstatic.com action=allow comment="Google Fonts Files"
-```
-
 ![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%202026-08-24%20212600.png)
 
 ![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%202026-08-24%20212644.png)
