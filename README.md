@@ -29,6 +29,8 @@ https://github.com/user-attachments/assets/c51e2947-0e07-4378-8ed1-3c8fcdd1bb32
 
 ### Cyberpunk Station
 
+Only Support HTTP PAP Dor Now
+
 ![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%20(26).png)
 
 ![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%20(27).png)
@@ -42,6 +44,8 @@ https://github.com/user-attachments/assets/c51e2947-0e07-4378-8ed1-3c8fcdd1bb32
 https://github.com/user-attachments/assets/95d4a78f-d89d-48e0-83fb-ad7f477b2940
 
 ### Pastel Sky
+
+Only Support HTTP PAP Dor Now
 
 ![enter image description here](https://github.com/shikikan-neko08/mikrotik-hotspot-login/blob/main/Gallery/Screenshot%202026-08-24%20212600.png)
 
